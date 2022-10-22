@@ -22,7 +22,7 @@ RUN apt-get -y update && \
 COPY requirements.txt ./requirements.txt
 RUN pip install -r requirements.txt
 
-# This is sorta a work around for git lfs. Github actions doesn't clone the git lfs files by default
+# STM32 Cube IDE 1.8 https://drive.google.com/file/d/196-UdzhZgfUZEKmr5JzYIM6HkaKGH3ln/view
 RUN gdown 196-UdzhZgfUZEKmr5JzYIM6HkaKGH3ln
 
 RUN chmod +x ./st-stm32cubeide_${STM32CUBEIDE_VERSION}_${BUILD}_amd64.deb_bundle.sh \
